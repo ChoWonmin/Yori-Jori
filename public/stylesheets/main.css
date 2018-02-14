@@ -1,0 +1,30 @@
+body {
+  padding: 0;
+  margin: 0; }
+
+* {
+  box-sizing: border-box; }
+
+.nav {
+  background-color: black;
+  height: 64px; }
+
+.cell {
+  padding: 8px; }
+
+.zone {
+  width: 100%;
+  height: 100%;
+  border: solid 1px #aaa; }
+
+.search {
+  height: 144px;
+  background-color: #fefefe;
+  border-bottom: solid 0.5px #bbbbbb; }
+
+.filter {
+  height: 88px;
+  background-color: #fefefe;
+  border-bottom: solid 0.5px #bbbbbb; }
+
+/*# sourceMappingURL=main.css.map */

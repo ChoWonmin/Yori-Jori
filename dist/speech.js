@@ -1,1 +1,3 @@
-console.log('speech 10!!!');
+'use strict';
+
+console.log('speech 02!!!');
