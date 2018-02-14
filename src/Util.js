@@ -1,3 +1,6 @@
 const Util = new function () {
-    this.loadJson = url => $.get(url);
-}
+
+    this.loadJson = async(url) => await $.get(url);
+
+};
+

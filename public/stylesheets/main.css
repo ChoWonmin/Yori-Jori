@@ -17,6 +17,9 @@ body {
   height: 100%;
   border: solid 1px #aaa; }
 
+.speech {
+  display: none; }
+
 .search {
   height: 144px;
   background-color: #fefefe;
@@ -26,5 +29,14 @@ body {
   height: 88px;
   background-color: #fefefe;
   border-bottom: solid 0.5px #bbbbbb; }
+
+.container {
+  background-color: #ebebeb; }
+  .container .cookList {
+    margin: auto;
+    max-width: 1040px; }
+    .container .cookList .cookItem img.image {
+      width: 202px;
+      height: 158px; }
 
 /*# sourceMappingURL=main.css.map */
