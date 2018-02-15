@@ -12,7 +12,7 @@ router.get('/cook', function (req, res, next) {
 });
 
 router.get('/main', function (req, res, next) {
-    res.render('main', fs);
+    res.render('main');
 });
 
 

@@ -9,6 +9,9 @@ $nav-height : 64px
 $search-height : 144px
 $filter-height : 88px
 
+$cookItem-width : 202px
+$cookItem-height : 158px
+
 .nav
   background-color: black
   height: $nav-height
@@ -38,13 +41,29 @@ $filter-height : 88px
   background-color: rgb(235,235,235)
 
   .cookList
+    padding-top: 24px
     margin: auto
-    max-width: 1040px
+    max-width: 1180px
+    display: flex
+    flex-wrap: wrap
+
     .cookItem
+      float: left
+      width: 202px
+      border-radius: 5px 5px 3px 3px
+      margin: 0 20px 20px 0
+      box-shadow: 0 1px 2px rgba(25,25,25,0.2)
+      background-color: #fff
+
       img.image
-        width: 202px
-        height: 158px
-      .title
+        width: $cookItem-width
+        height: $cookItem-height
+      .text
+        padding: 5px 10px 10px 10px
+        .name
+          font-size: 18px
+        .ingredient
+          padding-top: 5px
 
 
 

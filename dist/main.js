@@ -11,7 +11,7 @@ var main = new (_asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function
             switch (_context.prev = _context.next) {
                 case 0:
                     _context.next = 2;
-                    return Util.loadJson('/data/food_origin.json');
+                    return Util.loadJson(FOOD_JSON);
 
                 case 2:
                     cookList = _context.sent;
@@ -19,9 +19,13 @@ var main = new (_asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function
 
                     console.log(cookList);
 
-                    return _context.abrupt('return');
+                    _.forEach(cookList, function (cook, i) {
+                        var $cookList = $('.cookList');
 
-                case 6:
+                        $('<div class="cookItem">\n             <img class="image" src="' + (MAIN_IMAGE_PATH + cook.id + '.jpg') + '">\n             <div class="text">\n                <div class="name">' + cook.name + '</div>\n                <div class="ingredient">' + cook.ingredient_main + '</div>\n             </div>\n           </div>').appendTo($cookList);
+                    });
+
+                case 5:
                 case 'end':
                     return _context.stop();
             }

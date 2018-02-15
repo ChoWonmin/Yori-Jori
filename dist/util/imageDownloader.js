@@ -2,29 +2,49 @@
 
 var jsonfile = require('jsonfile');
 var file = 'src/data/food_origin.json';
+var downloadPath = 'public/images/';
 
 var _ = require('lodash');
 var download = require('image-downloader');
 
 var cookList = jsonfile.readFileSync(file);
 
-_.forEach(cookList, function (cook) {
-    console.log(cook);
-});
+var downloadFile = function downloadFile(url, path, name) {
+    var options = {
+        url: url,
+        dest: path + name
+    };
 
-var downloadFileName = 'hello.jpg';
+    download.image(options).then(function (_ref) {
+        var filename = _ref.filename,
+            image = _ref.image;
 
-var options = {
-    url: 'http://dthumb.phinf.naver.net/?src=%22http%3A%2F%2Fdbscthumb.phinf.naver.net%2F2756_000_1%2F20131107230809267_1OB3R4APH.jpg%2F451_i1.jpg%3Ftype%3Dw690_fst_n%26wm%3DY%22&twidth=670&theight=500&opts=17',
-    dest: 'test/' + downloadFileName
+        console.log('File saved to', filename);
+    }).catch(function (err) {
+        throw err;
+    });
 };
 
-download.image(options).then(function (_ref) {
-    var filename = _ref.filename,
-        image = _ref.image;
+// main 이미지 다운로드
+_.forEach(cookList, function (cook) {
+    var url = cook.mainImageLink;
+    var path = downloadPath + 'main/';
+    var fileName = cook.id + '.jpg';
 
-    console.log(filename);
-    console.log('File saved to', filename);
-}).catch(function (err) {
-    throw err;
+    downloadFile(url, path, fileName);
+});
+
+// 요리과정 이미지 다운로드
+_.forEach(cookList, function (cook) {
+    var process = cook.processImageLink;
+
+    for (var i = 0; i < process.length; i++) {
+        var url = process[i];
+        var path = downloadPath + 'process/';
+        var fileName = cook.id + '_' + (i + 1) + '.jpg';
+
+        console.log(i, cook.id);
+
+        downloadFile(url, path, fileName);
+    }
 });

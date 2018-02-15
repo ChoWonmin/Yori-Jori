@@ -33,10 +33,26 @@ body {
 .container {
   background-color: #ebebeb; }
   .container .cookList {
+    padding-top: 24px;
     margin: auto;
-    max-width: 1040px; }
-    .container .cookList .cookItem img.image {
+    max-width: 1180px;
+    display: flex;
+    flex-wrap: wrap; }
+    .container .cookList .cookItem {
+      float: left;
       width: 202px;
-      height: 158px; }
+      border-radius: 5px 5px 3px 3px;
+      margin: 0 20px 20px 0;
+      box-shadow: 0 1px 2px rgba(25, 25, 25, 0.2);
+      background-color: #fff; }
+      .container .cookList .cookItem img.image {
+        width: 202px;
+        height: 158px; }
+      .container .cookList .cookItem .text {
+        padding: 5px 10px 10px 10px; }
+        .container .cookList .cookItem .text .name {
+          font-size: 18px; }
+        .container .cookList .cookItem .text .ingredient {
+          padding-top: 5px; }
 
 /*# sourceMappingURL=main.css.map */

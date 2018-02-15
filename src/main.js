@@ -2,20 +2,21 @@ console.log('main');
 
 const main = new async function () {
 
-    const cookList = await Util.loadJson('/data/food_origin.json');
-
+    const cookList = await Util.loadJson(FOOD_JSON);
+    
     console.log(cookList);
-
-    return;
 
     _.forEach(cookList , (cook , i ) =>{
         const $cookList = $('.cookList');
 
         $(`<div class="cookItem">
-             <img class="image" src="${cook.mainImageLink}">
-             <div class="text">${cook.name}</div>
+             <img class="image" src="${MAIN_IMAGE_PATH+cook.id+'.jpg'}">
+             <div class="text">
+                <div class="name">${cook.name}</div>
+                <div class="ingredient">${cook.ingredient_main}</div>
+             </div>
            </div>`).appendTo($cookList);
-
     });
+    
 
 };
