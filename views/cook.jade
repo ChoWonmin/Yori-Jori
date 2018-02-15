@@ -1,6 +1,20 @@
 extends layout
 block content
-    h2 cook
+    h3 #{cook.name}
 
-    script(src='/Util.js')
+    img(src="/images/main/#{cook.id}.jpg")
+
+    h2 #{cook.ingredient_main}
+
+    - var ingredient_sub = cook.ingredient_sub
+    - if(ingredient_sub=='NA') ingredient_sub = ' 부재료 없음 '
+    h2 #{ingredient_sub}
+
+    h2 소요시간 #{cook.time}
+
+    - var kcal = cook.kcal
+    - if(kcal=='NA') kcal = ' 칼로리 정보 없음 '
+    h2 #{kcal}
+
+    link(rel='stylesheet', href='/stylesheets/cook.css')
     script(src='/cook.js')

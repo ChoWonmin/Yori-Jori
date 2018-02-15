@@ -5,7 +5,7 @@ function _asyncToGenerator(fn) { return function () { var gen = fn.apply(this, a
 console.log('main');
 
 var main = new (_asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee() {
-    var cookList;
+    var cookList, $cookItem;
     return regeneratorRuntime.wrap(function _callee$(_context) {
         while (1) {
             switch (_context.prev = _context.next) {
@@ -17,15 +17,26 @@ var main = new (_asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function
                     cookList = _context.sent;
 
 
-                    console.log(cookList);
-
                     _.forEach(cookList, function (cook, i) {
                         var $cookList = $('.cookList');
 
-                        $('<div class="cookItem">\n             <img class="image" src="' + (MAIN_IMAGE_PATH + cook.id + '.jpg') + '">\n             <div class="text">\n                <div class="name">' + cook.name + '</div>\n                <div class="ingredient">' + cook.ingredient_main + '</div>\n             </div>\n           </div>').appendTo($cookList);
+                        if (i < 10000060) $('<div class="cookItem" cookId="' + cook.id + '">\n             <img class="image" src="' + (MAIN_IMAGE_PATH + cook.id + '.jpg') + '">\n             <div class="text">\n                <div class="name">' + cook.name + '</div>\n                <div class="ingredient">' + cook.ingredient_main + '</div>\n             </div>\n           </div>').appendTo($cookList);
                     });
 
-                case 5:
+                    $cookItem = $('.cookItem');
+
+                    $cookItem.click(function () {
+                        var id = $(this).attr('cookId');
+
+                        $('.cookModal-container').css('display', 'block');
+                        $('.cookModal').load('/cook?id=' + id);
+                    });
+
+                    $('.close-btn').click(function () {
+                        $('.cookModal-container').css('display', 'none');
+                    });
+
+                case 7:
                 case 'end':
                     return _context.stop();
             }

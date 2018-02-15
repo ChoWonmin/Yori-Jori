@@ -1,6 +1,9 @@
 var express = require('express');
 var router = express.Router();
 const fs = require('fs');
+const jsonfile = require('jsonfile');
+
+const cookList = jsonfile.readFileSync('src/data/food.json')
 
 /* GET home page. */
 router.get('/', function (req, res, next) {
@@ -8,7 +11,9 @@ router.get('/', function (req, res, next) {
 });
 
 router.get('/cook', function (req, res, next) {
-    res.render('cook', fs);
+    const id = req.query.id;
+
+    res.render('cook', {cook:cookList[id]});
 });
 
 router.get('/main', function (req, res, next) {
