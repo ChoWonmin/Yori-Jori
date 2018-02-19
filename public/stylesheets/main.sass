@@ -1,13 +1,10 @@
-$search-height : 160px
-$filter-height : 150px
+$search-height : 180px
+$filter-height : 80px
 
 $cookItem-width : 182px
 $cookItem-height : 158px
 
-.container
-  margin-left: auto
-  margin-right: auto
-  max-width: 980px
+.header
 
 .speech
   display: none
@@ -18,29 +15,30 @@ $cookItem-height : 158px
   border-bottom: 1px solid lightgray
   text-align: center
 
-.search_bar
-  display: inline-block
-  width: 40%
-  height: 100%
-
-  .search_bar_input
+  .search_bar
     display: inline-block
-    border: none
-    outline: none
-    text-align: center
-    width : 100%
-    height: 60px
-    margin: 50px 0
-    font-size: 2rem
-    overflow: hidden
+    height: 100%
+
+    .search_bar_input
+      display: inline-block
+      border: none
+      outline: none
+      text-align: center
+      width: 325px
+      height: 60px
+      margin: 60px 0
+      font-size: 2rem
+      overflow: hidden
 
 .filter
   width: 100%
   height: $filter-height
   background-color: #fefefe
+  border-bottom: 1px solid lightgray
 
   .selection-checkboxes
     width: 100%
+    height: 100%
     margin-bottom: 5px
 
     .selection-checkbox
@@ -65,19 +63,21 @@ $cookItem-height : 158px
           margin-left: 10px
 
 .container
-  background-color: rgb(255,255,255)
+  margin-left: auto
+  margin-right: auto
+  background-color: #FAFAFA
 
   .cookList
-    border-top: 1px solid lightgray
-    max-width: 980px
+    max-width: 1210px
     margin: auto
     display: flex
     flex-wrap: wrap
+    max-width: 1230px
 
     .cookItem
       float: left
       width: 202px
-      margin: 21.5px
+      margin: 20px
       padding: 10px
       border-radius: 5px 5px 3px 3px
       box-shadow: 0 1px 2px rgba(25,25,25,0.2)
@@ -94,10 +94,7 @@ $cookItem-height : 158px
           font-weight: bold
           padding-bottom: 5px
           border-bottom: 0.5px solid lightgray
-          letter-spacing: 1px
         .ingredient
-          font-size: 13px
-          color: #282828
           padding-top: 5px
 
 .cookModal-container
@@ -110,20 +107,14 @@ $cookItem-height : 158px
   display: none
 
   .cookModal
-    width: 1180px
-    height: calc(100% - 30px)
+    max-width: 1180px
+    height: calc(100% - 120px)
     background-color: #fff
-    margin: 30px auto 0 auto
-    overflow-y: scroll
+    margin: 60px auto 60px auto
+
 
   i
     color: #fcfcfc
     position: absolute
     top: 25px
     right: 25px
-
-
-
-
-
-

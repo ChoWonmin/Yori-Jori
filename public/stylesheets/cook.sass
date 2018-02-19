@@ -1,19 +1,19 @@
 .article
   width: 100%
-  height: 50%
-  padding: 10px
-  border-bottom: 1px solid lightgray
+  height: 100%
+  border: 5px solid lightgray
 
   .articleImage
     width: 60%
     height: 100%
+    border-right: 5px solid lightgray
     display: inline-block
     vertical-align: top
+    background-size: cover
 
     img
-      margin: 40px 90px 40px 90px
-      width: calc(100% - 180px)
-      height: calc(100% - 80px)
+      width: 100%
+      height: 100%
 
   .articleContent
     width: 40%
@@ -21,47 +21,58 @@
     display: inline-block
     vertical-align: top
     text-align: left
-    padding: 0 20px
+    background-color: #FAFAFA
 
-    h1
-      margin-top: 40px
-      margin-bottom: 0
-      font-weight: bold
-      font-size: 200%
-
-    h2
-      margin-top: 40px
-      margin-bottom: 0
-      font-weight: bold
-
-    p
-      margin-top: 10px
-
-  .recipe
-    margin-top: 20px
-    width: 100%
-    height: 50%
-
-    .method
+    .head
+      height: 20%
       width: 100%
-      height: 100%
-      text-align: center
-      display: inline-block
       vertical-align: top
+      display: inline-block
 
       h1
-        margin-bottom: 20px
+        height: 80%
+        margin: 0 20px 20px 20px
+        text-align: center
         font-weight: bold
-        font-size: 2rem
+        font-size: 200%
+        border-bottom: 1px solid lightgray
+        padding-top: 40px
 
-.button-wrap
-  background-color: #fefefe
+    ul.info
+      height: 40%
+      width: 100%
+      margin: 0
 
-.btn
-  background-color: #abcdef
-  height: 80px
-  width: 200px
-  padding: 5px
+    .ingredients
+      height: 40%
+      width: 100%
+
+      .pingredient
+        width: 100%
+        height: 50%
+
+        h2
+          border-top: 1px solid lightgray
+          text-align: center
+          padding-top: 20px
+          margin: 0 20px 20px 20px
+        p
+          padding: 0 10px
+          text-align: center
+
+      .singredient
+        width: 100%
+        height: 50%
+
+        h2
+          border-top: 1px solid lightgray
+          text-align: center
+          padding-top: 20px
+          margin: 0 20px 20px 20px
+        p
+          padding: 0 10px
+          text-align: center
+
 
 .process-wrap
   display: none

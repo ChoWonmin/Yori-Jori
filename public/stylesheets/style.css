@@ -7,7 +7,13 @@ body {
   box-sizing: border-box; }
 
 .nav {
-  background-color: black;
-  height: 64px; }
+  border-bottom: 0.5px solid lightgray;
+  height: 60px;
+  background-color: #C8DDBB; }
+
+.main_title {
+  width: 980px;
+  margin: auto;
+  height: 100%; }
 
 /*# sourceMappingURL=style.css.map */
