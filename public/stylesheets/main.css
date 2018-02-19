@@ -1,47 +1,88 @@
-.cell {
-  padding: 8px; }
-
-.zone {
-  width: 100%;
-  height: 100%;
-  border: solid 1px #aaa; }
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 980px; }
 
 .speech {
   display: none; }
 
 .search {
-  height: 144px;
-  background-color: #fefefe;
-  border-bottom: solid 0.5px #bbbbbb; }
+  width: 100%;
+  height: 160px;
+  border-bottom: 1px solid lightgray;
+  text-align: center; }
+
+.search_bar {
+  display: inline-block;
+  width: 40%;
+  height: 100%; }
+  .search_bar .search_bar_input {
+    display: inline-block;
+    border: none;
+    outline: none;
+    text-align: center;
+    width: 100%;
+    height: 60px;
+    margin: 50px 0;
+    font-size: 2rem;
+    overflow: hidden; }
 
 .filter {
-  height: 88px;
-  background-color: #fefefe;
-  border-bottom: solid 0.5px #bbbbbb; }
+  width: 100%;
+  height: 150px;
+  background-color: #fefefe; }
+  .filter .selection-checkboxes {
+    width: 100%;
+    margin-bottom: 5px; }
+    .filter .selection-checkboxes .selection-checkbox {
+      width: 100%;
+      height: 40px;
+      margin-top: 5px;
+      margin-bottom: 5px;
+      float: left;
+      text-align: center; }
+      .filter .selection-checkboxes .selection-checkbox p {
+        height: 40px;
+        line-height: 40px;
+        margin: auto;
+        font-size: 110%;
+        width: auto;
+        font-weight: bold; }
+        .filter .selection-checkboxes .selection-checkbox p .box {
+          font-weight: normal;
+          font-size: 100%;
+          margin-left: 10px; }
 
 .container {
-  background-color: #ebebeb; }
+  background-color: white; }
   .container .cookList {
-    padding-top: 24px;
+    border-top: 1px solid lightgray;
+    max-width: 980px;
     margin: auto;
-    max-width: 1180px;
     display: flex;
     flex-wrap: wrap; }
     .container .cookList .cookItem {
       float: left;
       width: 202px;
+      margin: 21.5px;
+      padding: 10px;
       border-radius: 5px 5px 3px 3px;
-      margin: 0 20px 20px 0;
       box-shadow: 0 1px 2px rgba(25, 25, 25, 0.2);
       background-color: #fff; }
       .container .cookList .cookItem img.image {
-        width: 202px;
+        width: 182px;
         height: 158px; }
       .container .cookList .cookItem .text {
         padding: 5px 10px 10px 10px; }
         .container .cookList .cookItem .text .name {
-          font-size: 18px; }
+          font-size: 18px;
+          font-weight: bold;
+          padding-bottom: 5px;
+          border-bottom: 0.5px solid lightgray;
+          letter-spacing: 1px; }
         .container .cookList .cookItem .text .ingredient {
+          font-size: 13px;
+          color: #282828;
           padding-top: 5px; }
 
 .cookModal-container {
@@ -56,11 +97,12 @@
     width: 1180px;
     height: calc(100% - 30px);
     background-color: #fff;
-    margin: 30px auto 0 auto; }
+    margin: 30px auto 0 auto;
+    overflow-y: scroll; }
   .cookModal-container i {
     color: #fcfcfc;
     position: absolute;
-    top: 20px;
-    right: 20px; }
+    top: 25px;
+    right: 25px; }
 
 /*# sourceMappingURL=main.css.map */

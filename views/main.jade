@@ -1,21 +1,48 @@
 extends layout
 block content
-    .nav
-
-    .speech
-        iframe(width=200,height=100 src='/speech?text=안녕하세요')
-
-
-    .search
-
-    .filter
-
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" >
     .container
+        .i.material-icons check
+        .nav
+            .main_title
+                h1 Yo-yack
+
+        .search
+            .search_bar
+                input.search_bar_input(autocomplete='off', type='text', name='search', value='', placeholder='검색어를 입력해주세요')
+
+        //.speech
+        //    iframe(width=200,height=100 src='/speech?text=안녕하세요')
+
+        .filter
+            .selection-checkboxes
+                .selection-checkbox
+                    p 난이도:
+                    .icon
+                        .text
+                        .i.material-icons check_box
+                        //input(type='checkbox').box
+                .selection-checkbox
+                    p  시간:
+                        <input type="checkbox" class="box">~25분 </>
+                        <input type="checkbox" class="box">25분~35분 </>
+                        <input type="checkbox" class="box">35분~90분 </>
+                        <input type="checkbox" class="box">90분~ </>
+
+                .selection-checkbox
+                    p 칼로리:
+                        <input type="checkbox" class="box">~100kcal </>
+                        <input type="checkbox" class="box">100kcal~250kcal </>
+                        <input type="checkbox" class="box">250kcal~400kcal </>
+                        <input type="checkbox" class="box">400kcal~550kcal </>
+                        <input type="checkbox" class="box">550kcal~ </>
+
+
         .cookList
 
-    .cookModal-container
-        i.close-btn.material-icons clear
-        .cookModal
+        .cookModal-container
+            i.close-btn.material-icons clear
+            .cookModal
 
 
     link(rel='stylesheet', href='/stylesheets/main.css')

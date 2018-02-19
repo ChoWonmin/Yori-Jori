@@ -1,20 +1,35 @@
 extends layout
 block content
-    h3 #{cook.name}
 
-    img(src="/images/main/#{cook.id}.jpg")
+    .cook-wrap(id="#{cook.id}")
+        .article
+            .articleImage
+                img(src="/images/main/#{cook.id}.jpg")
+            .articleContent
+                h1 #{cook.name}
 
-    h2 #{cook.ingredient_main}
+                h2 소요시간
+                p #{cook.time}
 
-    - var ingredient_sub = cook.ingredient_sub
-    - if(ingredient_sub=='NA') ingredient_sub = ' 부재료 없음 '
-    h2 #{ingredient_sub}
+                - var kcal = cook.kcal
+                - if(kcal=='NA') kcal = ' 칼로리 정보 없음 '
+                h2 Kcal
+                p #{kcal}
 
-    h2 소요시간 #{cook.time}
+                h2 주재료
+                p #{cook.ingredient_main}
 
-    - var kcal = cook.kcal
-    - if(kcal=='NA') kcal = ' 칼로리 정보 없음 '
-    h2 #{kcal}
+        .recipe
+            .method
+                h1 조리순서
+
+        .button-wrap
+            .start-btn
+
+    - for (var i = 0 ; i < cook.process.length ; i++)
+        //.process-wrap(index='#{i}')
+          //  img(src="/images/process/#{cook.id}_#{i+1}.jpg")
+            //.descript #{cook.process[i]}
 
     link(rel='stylesheet', href='/stylesheets/cook.css')
     script(src='/cook.js')
