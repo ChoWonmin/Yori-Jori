@@ -1,1 +1,0 @@
-console.log('speech 02!!!');

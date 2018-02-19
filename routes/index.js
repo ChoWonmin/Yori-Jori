@@ -32,7 +32,7 @@ router.get('/speech', function (req, res) {
     var request = require('request');
     var options = {
         url: api_url,
-        form: {'speaker': 'jinho', 'speed': '0', 'text': queries.text},
+        form: {'speaker': 'mijin', 'speed': '0', 'text': queries.text},
         headers: {'X-Naver-Client-Id': client_id, 'X-Naver-Client-Secret': client_secret}
     };
     var writeStream = fs.createWriteStream('./tts.mp3');

@@ -1,30 +1,21 @@
 .article {
-  width: 100%;
-  height: 100%;
-  border: 5px solid lightgray; }
+  border: 5px solid lightgray;
+  display: flex; }
   .article .articleImage {
-    width: 60%;
     height: 100%;
     border-right: 5px solid lightgray;
-    display: inline-block;
-    vertical-align: top;
-    background-size: cover; }
+    flex: 1; }
     .article .articleImage img {
       width: 100%;
       height: 100%; }
   .article .articleContent {
-    width: 40%;
     height: 100%;
-    display: inline-block;
-    vertical-align: top;
+    flex: 1;
     text-align: left;
     background-color: #FAFAFA; }
     .article .articleContent .head {
-      height: 20%;
-      width: 100%;
-      vertical-align: top;
-      display: inline-block; }
-      .article .articleContent .head h1 {
+      height: 130px; }
+      .article .articleContent .head .name-text {
         height: 80%;
         margin: 0 20px 20px 20px;
         text-align: center;
@@ -39,30 +30,28 @@
     .article .articleContent .ingredients {
       height: 40%;
       width: 100%; }
-      .article .articleContent .ingredients .pingredient {
+      .article .articleContent .ingredients .ingredient {
         width: 100%;
         height: 50%; }
-        .article .articleContent .ingredients .pingredient h2 {
+        .article .articleContent .ingredients .ingredient .ingredient-title {
+          font-size: 1.5em;
           border-top: 1px solid lightgray;
           text-align: center;
           padding-top: 20px;
           margin: 0 20px 20px 20px; }
-        .article .articleContent .ingredients .pingredient p {
-          padding: 0 10px;
-          text-align: center; }
-      .article .articleContent .ingredients .singredient {
-        width: 100%;
-        height: 50%; }
-        .article .articleContent .ingredients .singredient h2 {
-          border-top: 1px solid lightgray;
-          text-align: center;
-          padding-top: 20px;
-          margin: 0 20px 20px 20px; }
-        .article .articleContent .ingredients .singredient p {
+        .article .articleContent .ingredients .ingredient .ingredient-text {
           padding: 0 10px;
           text-align: center; }
 
+.btn {
+  width: 100px;
+  height: 50px;
+  background-color: darkorange; }
+
 .process-wrap {
+  display: none; }
+
+.speechFrame {
   display: none; }
 
 /*# sourceMappingURL=cook.css.map */

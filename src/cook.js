@@ -12,15 +12,18 @@ const cook = new function () {
             currentIndex = 0;
 
             $(cookCanvas).css('display','none');
-            $(processCanvasList[0]).css('display','block');
+
+            that.changePage(currentIndex);
 
         });
 
         $('.next').click(function () {
+            if(currentIndex > maxLength-2)
+                return ;
+
             $(processCanvasList[currentIndex]).css('display','none');
 
-            if(currentIndex <= maxLength-2)
-                currentIndex += 1;
+            currentIndex += 1;
 
             that.changePage(currentIndex);
         });
@@ -40,10 +43,19 @@ const cook = new function () {
 
     }
 
-    this.changePage = function (index) {
 
+    this.changePage = function (index) {
         $(processCanvasList[index]).css('display','block');
+
+        const description = $(processCanvasList[index]).attr('description');
+
+
+        $(`<iframe src="/speech?text=${description}">`)
+            .appendTo($('.speechFrame'));
+
+        console.log('frame 호출')
     }
+
 
 
 

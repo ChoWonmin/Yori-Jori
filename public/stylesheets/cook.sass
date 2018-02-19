@@ -1,35 +1,29 @@
+$modal-header-height : 130px
+
+
 .article
-  width: 100%
-  height: 100%
   border: 5px solid lightgray
+  display: flex
 
   .articleImage
-    width: 60%
     height: 100%
     border-right: 5px solid lightgray
-    display: inline-block
-    vertical-align: top
-    background-size: cover
+    flex: 1
 
     img
       width: 100%
       height: 100%
 
   .articleContent
-    width: 40%
     height: 100%
-    display: inline-block
-    vertical-align: top
+    flex: 1
     text-align: left
     background-color: #FAFAFA
 
     .head
-      height: 20%
-      width: 100%
-      vertical-align: top
-      display: inline-block
+      height: $modal-header-height
 
-      h1
+      .name-text
         height: 80%
         margin: 0 20px 20px 20px
         text-align: center
@@ -47,32 +41,28 @@
       height: 40%
       width: 100%
 
-      .pingredient
+      .ingredient
         width: 100%
         height: 50%
 
-        h2
+        .ingredient-title
+          font-size: 1.5em
           border-top: 1px solid lightgray
           text-align: center
           padding-top: 20px
           margin: 0 20px 20px 20px
-        p
+
+        .ingredient-text
           padding: 0 10px
           text-align: center
 
-      .singredient
-        width: 100%
-        height: 50%
-
-        h2
-          border-top: 1px solid lightgray
-          text-align: center
-          padding-top: 20px
-          margin: 0 20px 20px 20px
-        p
-          padding: 0 10px
-          text-align: center
-
+.btn
+  width: 100px
+  height: 50px
+  background-color: darkorange
 
 .process-wrap
+  display: none
+
+.speechFrame
   display: none

@@ -15,7 +15,7 @@ html
 
                 .articleContent
                     .head
-                        h1 #{cook.name}
+                        .name-text #{cook.name}
 
                     ul.info
                         li
@@ -26,28 +26,35 @@ html
                             strong 칼로리
                         - var kcal = cook.kcal
                         - if(kcal=='NA') kcal = ' 칼로리 정보 없음 '
-                        h2 #{kcal}
+                        .kcal-text #{kcal}
 
                         li
                             strong 난이도
 
                     .ingredients
-                        .pingredient
-                            h2 주재료
-                            p #{cook.ingredient_main}
-                        .singredient
-                            h2 부재료
+                        .ingredient
+                            .ingredient-title 주재료
+                            .ingredient-text #{cook.ingredient_main}
 
-            //.button-wrap
-                //.process.btn
+                    .ingredients
+                        .ingredient
+                            .ingredient-title 부재료
+                            .ingredient-text #{cook.ingredient_sub}
+
+
+            .button-wrap
+                .process.btn
 
     - for (var i = 0 ; i < cook.process.length ; i++)
-        .process-wrap
+        .process-wrap(description='#{cook.process[i]}')
             img(src="/images/process/#{cook.id}_#{i+1}.jpg")
             .descript #{cook.process[i]}
 
             .next.btn(index='#{i}') next
             .back.btn(index='#{i}') back
+
+    .speechFrame
+
 
     link(rel='stylesheet', href='/stylesheets/cook.css')
     script(src='/cook.js')
