@@ -1,31 +1,43 @@
 'use strict';
 
-function _asyncToGenerator(fn) { return function () { var gen = fn.apply(this, arguments); return new Promise(function (resolve, reject) { function step(key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { return Promise.resolve(value).then(function (value) { step("next", value); }, function (err) { step("throw", err); }); } } return step("next"); }); }; }
-
 var cook = new function () {
+
+    var that = this;
+    var maxLength = $('.cook-wrap').attr('length') * 1;
     var currentIndex = void 0;
     var cookCanvas = $('.cook-wrap');
-    //const processCanvasList = $('.process-wrap');
+    var processCanvasList = $('.process-wrap');
 
-    this.init = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee() {
-        return regeneratorRuntime.wrap(function _callee$(_context) {
-            while (1) {
-                switch (_context.prev = _context.next) {
-                    case 0:
-                        $('.start-btn').click(function () {
-                            cookCanvas.attr('display', 'none');
-                            currentIndex = 0;
+    this.addButoonAction = function () {
+        $('.process').click(function () {
+            cookCanvas.attr('display', 'none');
+            currentIndex = 0;
 
-                            //processCanvasList[currentIndex].attr('display','block');
-                        });
+            $(cookCanvas).css('display', 'none');
+            $(processCanvasList[0]).css('display', 'block');
+        });
 
-                    case 1:
-                    case 'end':
-                        return _context.stop();
-                }
-            }
-        }, _callee, this);
-    }));
+        $('.next').click(function () {
+            $(processCanvasList[currentIndex]).css('display', 'none');
+
+            if (currentIndex <= maxLength - 2) currentIndex += 1;
+
+            that.changePage(currentIndex);
+        });
+
+        $('.back').click(function () {
+            $(processCanvasList[currentIndex]).css('display', 'none');
+
+            if (currentIndex >= 0) currentIndex -= 1;
+
+            if (currentIndex === -1) $(cookCanvas).css('display', 'block');else that.changePage(currentIndex);
+        });
+    };
+
+    this.changePage = function (index) {
+
+        $(processCanvasList[index]).css('display', 'block');
+    };
 }();
 
-cook.init();
+cook.addButoonAction();

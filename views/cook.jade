@@ -1,35 +1,45 @@
-extends layout
-block content
+doctype html
+html
+    head
+        title= title
 
-    .cook-wrap(id="#{cook.id}")
-        .article
-            .articleImage
-                img(src="/images/main/#{cook.id}.jpg")
-            .articleContent
-                h1 #{cook.name}
+        script(src='/jquery/dist/jquery.min.js')
+        script(src='/constant.js')
 
-                h2 소요시간
-                p #{cook.time}
+    body
 
-                - var kcal = cook.kcal
-                - if(kcal=='NA') kcal = ' 칼로리 정보 없음 '
-                h2 Kcal
-                p #{kcal}
+        .cook-wrap(length="#{cook.process.length}")
+            .article
+                .articleImage
+                    img(src="/images/main/#{cook.id}.jpg")
+                .articleContent
+                    h1 #{cook.name}
 
-                h2 주재료
-                p #{cook.ingredient_main}
+                    h2 소요시간
+                    p #{cook.time}
 
-        .recipe
-            .method
-                h1 조리순서
+                    - var kcal = cook.kcal
+                    - if(kcal=='NA') kcal = ' 칼로리 정보 없음 '
+                    h2 Kcal
+                    p #{kcal}
 
-        .button-wrap
-            .start-btn
+                    h2 주재료
+                    p #{cook.ingredient_main}
+
+            .recipe
+                .method
+                    h1 조리순서
+
+            .button-wrap
+                .process.btn
 
     - for (var i = 0 ; i < cook.process.length ; i++)
-        //.process-wrap(index='#{i}')
-          //  img(src="/images/process/#{cook.id}_#{i+1}.jpg")
-            //.descript #{cook.process[i]}
+        .process-wrap
+            img(src="/images/process/#{cook.id}_#{i+1}.jpg")
+            .descript #{cook.process[i]}
+
+            .next.btn(index='#{i}') next
+            .back.btn(index='#{i}') back
 
     link(rel='stylesheet', href='/stylesheets/cook.css')
     script(src='/cook.js')
