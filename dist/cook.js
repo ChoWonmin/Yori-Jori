@@ -10,9 +10,9 @@ var cook = new function () {
 
     this.init = function () {
 
-        recognization.init();
+        console.log('cook init');
 
-        recognization.startMic(function (res) {
+        if (recognization.init() != -1) recognization.startMic(function (res) {
 
             res = res.trim();
 

@@ -7,14 +7,13 @@ var recognization = new function () {
     this.init = function () {
 
         if (!('webkitSpeechRecognition' in window)) {
-            alert('음성 인식을 지원하지 않는 브라우저입니다');
+            alert(' 크롬에서는 음성 인식을 지원합니다. ');
             return -1;
         }
 
         mic = new webkitSpeechRecognition();
 
         mic.continuous = true;
-        mic.interimResults = false;
         mic.lang = 'ko-KR';
     };
 
