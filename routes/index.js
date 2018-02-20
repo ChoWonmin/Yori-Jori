@@ -43,7 +43,10 @@ router.get('/speech', function (req, res) {
     _req.pipe(writeStream); // file로 출력
     _req.pipe(res); // 브라우저로 출력
 
-    //res.render('speech');
+});
+
+router.get('/test', function (req, res, next) {
+    res.render('speech');
 });
 
 module.exports = router;

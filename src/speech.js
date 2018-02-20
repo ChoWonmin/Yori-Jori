@@ -1,12 +1,12 @@
-'use strict';
-
-if (!('webkitSpeechRecognition' in window)) $('#speechbbbbox').html('<strong>지원하지 않는 브라우저입니다.</strong>');else {
-    var recognition = new webkitSpeechRecognition();
+if(!('webkitSpeechRecognition' in window))
+    $('#speechbbbbox').html('<strong>지원하지 않는 브라우저입니다.</strong>');
+else {
+    const recognition = new webkitSpeechRecognition();
     recognition.continuous = true;
     recognition.interimResults = true;
     recognition.lang = 'ko-KR';
 
-    recognition.onresult = function (event) {
+    recognition.onresult = function(event) {
         var interim_transcript = '';
         var final_transcript = '';
 
@@ -18,8 +18,10 @@ if (!('webkitSpeechRecognition' in window)) $('#speechbbbbox').html('<strong>지
             }
         }
 
-        console.log(interim_transcript, final_transcript);
+        console.log(interim_transcript , final_transcript);
+
     };
 
     recognition.start();
+
 }

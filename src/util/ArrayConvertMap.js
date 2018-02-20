@@ -6,7 +6,6 @@ const file = path + 'food_origin.json';
 const destFile = path + 'food.json';
 
 
-
 const cookList = jsonfile.readFileSync(file);
 let res = {};
 

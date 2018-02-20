@@ -14,22 +14,26 @@ html
                     img(src="/images/main/#{cook.id}.jpg")
 
                 .articleContent
+
                     .head
-                        .name-text #{cook.name}
+                        .head-text
+                            .cite-text #{cook.cite}
+                            .name-text #{cook.name}
 
-                    ul.info
-                        li
-                            strong 시간
-                        p #{cook.time}
-
-                        li
-                            strong 칼로리
-                        - var kcal = cook.kcal
-                        - if(kcal=='NA') kcal = ' 칼로리 정보 없음 '
-                        .kcal-text #{kcal}
-
-                        li
-                            strong 난이도
+                    .center
+                        .infos
+                            .info
+                                i.icon.material-icons timer
+                                .info-text #{cook.time}분
+                            .info
+                                i.icon.material-icons restaurant
+                                - var difficulty = cook.difficulty
+                                .info-text #{difficulty}
+                            .info
+                                img(src='/images/kcal.png', width='56')
+                                - var kcal = cook.kcal
+                                - if(kcal=='NA') kcal = ' X '
+                                .info-text #{kcal}
 
                     .ingredients
                         .ingredient
@@ -38,12 +42,16 @@ html
 
                     .ingredients
                         .ingredient
+                            - var ingredient = cook.ingredient_sub
+                            - if(ingredient=='NA') ingredient = ' 부재료 없음 '
                             .ingredient-title 부재료
-                            .ingredient-text #{cook.ingredient_sub}
+                            .ingredient-text #{ingredient}
 
+                    .button-wrap
+                        .process.btn
+                            h2 조리법 보러가기 >
+                            i.material-icons
 
-            .button-wrap
-                .process.btn
 
     - for (var i = 0 ; i < cook.process.length ; i++)
         .process-wrap(description='#{cook.process[i]}')

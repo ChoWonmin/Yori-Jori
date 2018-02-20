@@ -6,7 +6,7 @@ const cook = new function () {
     const cookCanvas = $('.cook-wrap');
     const processCanvasList = $('.process-wrap');
 
-    this.addButoonAction = function () {
+    this.addButonAction = function () {
         $('.process').click(function () {
             cookCanvas.attr('display','none');
             currentIndex = 0;
@@ -50,12 +50,7 @@ const cook = new function () {
         let description = $(processCanvasList[index]).attr('description');
         description = description.slice( description.indexOf('.')+1 , description.length );
 
-
-        console.log('indexOf ' , description.indexOf('.') );
-        console.log('description ' , description );
-
-        $(`<iframe src="/speech?text=${description}">`)
-            .appendTo($('.speechFrame'));
+        $(`<iframe src="/speech?text=${description}">`).appendTo($('.speechFrame'));
 
     }
 
@@ -64,7 +59,7 @@ const cook = new function () {
 
 }
 
-cook.addButoonAction();
+cook.addButonAction();
 
 
 

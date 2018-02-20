@@ -9,18 +9,16 @@ block content
             form.search_bar(method='post', action='/')
                 input.search_bar_input(autocomplete='off', type='text', name='search', value='', placeholder='검색어를 입력해주세요')
 
-        //.speech
-        //    iframe(src='/speech?text=안녕하세요')
-
         .filter
+
 
     .container
 
         .cookList
 
-        .cookModal-container
-            i.close-btn.material-icons clear
-            .cookModal
+    .cookModal-container
+        i.close-btn.material-icons clear
+        .cookModal
 
 
     link(rel='stylesheet', href='/stylesheets/main.css')

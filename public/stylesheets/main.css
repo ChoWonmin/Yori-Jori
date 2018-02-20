@@ -88,10 +88,10 @@
   background-color: rgba(5, 5, 5, 0.8);
   display: none; }
   .cookModal-container .cookModal {
-    max-width: 1180px;
-    background-color: #fff;
-    margin: 60px auto 60px auto; }
-  .cookModal-container i {
+    width: 1066px;
+    height: 650px;
+    margin: 151px auto; }
+  .cookModal-container i.close-btn {
     color: #fcfcfc;
     position: absolute;
     top: 25px;
