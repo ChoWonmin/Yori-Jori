@@ -15,6 +15,8 @@ const cook = new function () {
 
             res = res.trim();
 
+            console.log(res);
+
             if(res==='다음'){
                 if(currentIndex===-1)
                     that.startProcess();
@@ -25,13 +27,9 @@ const cook = new function () {
                 that.backProcess();
             else if(res==='뭐라고' || res==='다시'){
                 let description = $(processCanvasList[currentIndex]).attr('description');
-                description = description.slice( description.indexOf('.')+1 , description.length );
 
-                $(`<iframe src="/speech?text=${description}">`).appendTo($('.speechFrame'));
+                //$(`<iframe src="/speech?text=${description}">`).appendTo($('.speechFrame'));
             }
-
-
-
 
         });
 
@@ -84,9 +82,8 @@ const cook = new function () {
         $(processCanvasList[index]).css('display','block');
 
         let description = $(processCanvasList[index]).attr('description');
-        description = description.slice( description.indexOf('.')+1 , description.length );
 
-        $(`<iframe src="/speech?text=${description}">`).appendTo($('.speechFrame'));
+        //$(`<iframe src="/speech?text=${description}">`).appendTo($('.speechFrame'));
 
     }
 

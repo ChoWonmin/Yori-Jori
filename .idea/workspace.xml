@@ -4,12 +4,9 @@
     <list default="true" id="fa19feea-9c64-4a01-8b4c-90917d1ae3d4" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/dist/cook.js" afterPath="$PROJECT_DIR$/dist/cook.js" />
-      <change beforePath="$PROJECT_DIR$/dist/recognization.js" afterPath="$PROJECT_DIR$/dist/recognization.js" />
-      <change beforePath="$PROJECT_DIR$/routes/index.js" afterPath="$PROJECT_DIR$/routes/index.js" />
       <change beforePath="$PROJECT_DIR$/src/cook.js" afterPath="$PROJECT_DIR$/src/cook.js" />
-      <change beforePath="$PROJECT_DIR$/src/recognization.js" afterPath="$PROJECT_DIR$/src/recognization.js" />
-      <change beforePath="$PROJECT_DIR$/tts.mp3" afterPath="$PROJECT_DIR$/tts.mp3" />
-      <change beforePath="$PROJECT_DIR$/views/speech.jade" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/data/food.json" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/util/paging.js" afterPath="" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -61,34 +58,53 @@
         <entry file="file://$PROJECT_DIR$/views/cook.jade">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="1320">
-              <caret line="60" column="32" lean-forward="true" selection-start-line="60" selection-start-column="32" selection-end-line="60" selection-end-column="32" />
+              <caret line="60" column="32" lean-forward="false" selection-start-line="60" selection-start-column="32" selection-end-line="60" selection-end-column="32" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="recognization.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="recognization.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/recognization.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="279">
-              <caret line="13" column="30" lean-forward="true" selection-start-line="13" selection-start-column="30" selection-end-line="13" selection-end-column="30" />
+            <state relative-caret-position="330">
+              <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="cook.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="cook.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/cook.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="182">
-              <caret line="12" column="38" lean-forward="true" selection-start-line="12" selection-start-column="38" selection-end-line="12" selection-end-column="38" />
+            <state relative-caret-position="163">
+              <caret line="24" column="13" lean-forward="true" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="13" />
               <folding>
-                <element signature="e#387#1030#0" expanded="false" />
-                <element signature="e#1110#1262#0" expanded="false" />
-                <element signature="e#1300#1462#0" expanded="false" />
-                <element signature="e#1499#1701#0" expanded="false" />
-                <element signature="e#1738#2013#0" expanded="false" />
+                <element signature="e#1040#1192#0" expanded="false" />
+                <element signature="e#1230#1392#0" expanded="false" />
+                <element signature="e#1429#1631#0" expanded="false" />
+                <element signature="e#1668#1943#0" expanded="false" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="sliceProcess.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/util/sliceProcess.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="110">
+              <caret line="5" column="32" lean-forward="false" selection-start-line="5" selection-start-column="32" selection-end-line="5" selection-end-column="32" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="difficulty.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/util/difficulty.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="315">
+              <caret line="28" column="17" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -119,7 +135,6 @@
         <option value="$PROJECT_DIR$/views/index.jade" />
         <option value="$PROJECT_DIR$/dist/speech.js" />
         <option value="$PROJECT_DIR$/app.js" />
-        <option value="$PROJECT_DIR$/src/data/food.json" />
         <option value="$PROJECT_DIR$/src/data/food02.json" />
         <option value="$PROJECT_DIR$/src/Util.js" />
         <option value="$PROJECT_DIR$/test.js" />
@@ -140,8 +155,11 @@
         <option value="$PROJECT_DIR$/views/speech.jade" />
         <option value="$PROJECT_DIR$/views/cook.jade" />
         <option value="$PROJECT_DIR$/routes/index.js" />
-        <option value="$PROJECT_DIR$/src/cook.js" />
         <option value="$PROJECT_DIR$/src/recognization.js" />
+        <option value="$PROJECT_DIR$/src/data/food.json" />
+        <option value="$PROJECT_DIR$/src/util/spliceProcess.js" />
+        <option value="$PROJECT_DIR$/src/util/sliceProcess.js" />
+        <option value="$PROJECT_DIR$/src/cook.js" />
       </list>
     </option>
   </component>
@@ -217,6 +235,18 @@
             <path>
               <item name="Yo-Yack" type="b2602c69:ProjectViewProjectNode" />
               <item name="Yo-Yack" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="data" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Yo-Yack" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Yo-Yack" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="util" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Yo-Yack" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Yo-Yack" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -257,10 +287,10 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Node.js.difficulty.js">
+  <component name="RunManager" selected="Node.js.spliceProcess.js">
     <configuration name="convertMap.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-js-file="$PROJECT_DIR$/src/util/ArrayConvertMap.js" working-dir="$PROJECT_DIR$/src/util" />
     <configuration name="difficulty.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-js-file="difficulty.js" working-dir="$PROJECT_DIR$/src/util" />
-    <configuration name="imageDownloader.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-js-file="src/util/imageDownloader.js" working-dir="$PROJECT_DIR$" />
+    <configuration name="spliceProcess.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-js-file="$PROJECT_DIR$/src/util/sliceProcess.js" working-dir="$PROJECT_DIR$/src/util" />
     <configuration name="build" type="js.build_tools.npm" factoryName="npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
@@ -280,19 +310,19 @@
       <envs />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Node.js.imageDownloader.js" />
-      <item index="1" class="java.lang.String" itemvalue="npm.start" />
-      <item index="2" class="java.lang.String" itemvalue="npm.build" />
-      <item index="3" class="java.lang.String" itemvalue="Node.js.convertMap.js" />
-      <item index="4" class="java.lang.String" itemvalue="Node.js.difficulty.js" />
+      <item index="0" class="java.lang.String" itemvalue="npm.start" />
+      <item index="1" class="java.lang.String" itemvalue="npm.build" />
+      <item index="2" class="java.lang.String" itemvalue="Node.js.convertMap.js" />
+      <item index="3" class="java.lang.String" itemvalue="Node.js.difficulty.js" />
+      <item index="4" class="java.lang.String" itemvalue="Node.js.spliceProcess.js" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="npm.start" />
-        <item index="1" class="java.lang.String" itemvalue="npm.build" />
-        <item index="2" class="java.lang.String" itemvalue="Node.js.difficulty.js" />
-        <item index="3" class="java.lang.String" itemvalue="Node.js.convertMap.js" />
-        <item index="4" class="java.lang.String" itemvalue="Node.js.imageDownloader.js" />
+        <item index="0" class="java.lang.String" itemvalue="npm.build" />
+        <item index="1" class="java.lang.String" itemvalue="npm.start" />
+        <item index="2" class="java.lang.String" itemvalue="Node.js.spliceProcess.js" />
+        <item index="3" class="java.lang.String" itemvalue="Node.js.difficulty.js" />
+        <item index="4" class="java.lang.String" itemvalue="Node.js.convertMap.js" />
       </list>
     </recent_temporary>
   </component>
@@ -323,12 +353,12 @@
       <workItem from="1519040944967" duration="14702000" />
       <workItem from="1519097487302" duration="11706000" />
       <workItem from="1519118605290" duration="612000" />
-      <workItem from="1519138229712" duration="5863000" />
+      <workItem from="1519138229712" duration="7936000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="86495000" />
+    <option name="totallyTimeSpent" value="88568000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -374,31 +404,15 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/views/speech.jade">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="66">
-          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/routes/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="44">
-          <caret line="2" column="25" lean-forward="false" selection-start-line="2" selection-start-column="25" selection-end-line="2" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/cook.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="110">
           <caret line="5" column="27" lean-forward="true" selection-start-line="5" selection-start-column="27" selection-end-line="5" selection-end-column="27" />
           <folding>
-            <element signature="e#387#1030#0" expanded="false" />
-            <element signature="e#1110#1262#0" expanded="false" />
-            <element signature="e#1300#1462#0" expanded="false" />
-            <element signature="e#1499#1701#0" expanded="false" />
-            <element signature="e#1738#2013#0" expanded="false" />
+            <element signature="e#1040#1192#0" expanded="false" />
+            <element signature="e#1230#1392#0" expanded="false" />
+            <element signature="e#1429#1631#0" expanded="false" />
+            <element signature="e#1668#1943#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -613,20 +627,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/data/food.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/util/difficulty.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="24" column="17" lean-forward="true" selection-start-line="24" selection-start-column="17" selection-end-line="24" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/util/ArrayConvertMap.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="154">
@@ -709,30 +709,61 @@
     <entry file="file://$PROJECT_DIR$/views/cook.jade">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1320">
-          <caret line="60" column="32" lean-forward="true" selection-start-line="60" selection-start-column="32" selection-end-line="60" selection-end-column="32" />
+          <caret line="60" column="32" lean-forward="false" selection-start-line="60" selection-start-column="32" selection-end-line="60" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/recognization.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/util/difficulty.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="28" column="17" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/data/food_noneSlice.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="1031356" lean-forward="false" selection-start-line="0" selection-start-column="1031356" selection-end-line="0" selection-end-column="1031356" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/data/food.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="381">
+          <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/util/sliceProcess.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="110">
+          <caret line="5" column="32" lean-forward="false" selection-start-line="5" selection-start-column="32" selection-end-line="5" selection-end-column="32" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/cook.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="182">
-          <caret line="12" column="38" lean-forward="true" selection-start-line="12" selection-start-column="38" selection-end-line="12" selection-end-column="38" />
+        <state relative-caret-position="163">
+          <caret line="24" column="13" lean-forward="true" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="13" />
           <folding>
-            <element signature="e#387#1030#0" expanded="false" />
-            <element signature="e#1110#1262#0" expanded="false" />
-            <element signature="e#1300#1462#0" expanded="false" />
-            <element signature="e#1499#1701#0" expanded="false" />
-            <element signature="e#1738#2013#0" expanded="false" />
+            <element signature="e#1040#1192#0" expanded="false" />
+            <element signature="e#1230#1392#0" expanded="false" />
+            <element signature="e#1429#1631#0" expanded="false" />
+            <element signature="e#1668#1943#0" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/recognization.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="279">
-          <caret line="13" column="30" lean-forward="true" selection-start-line="13" selection-start-column="30" selection-end-line="13" selection-end-column="30" />
-          <folding />
         </state>
       </provider>
     </entry>

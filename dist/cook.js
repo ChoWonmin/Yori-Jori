@@ -16,13 +16,14 @@ var cook = new function () {
 
             res = res.trim();
 
+            console.log(res);
+
             if (res === '다음') {
                 if (currentIndex === -1) that.startProcess();else that.nextProcess();
             } else if (res === '아까') that.backProcess();else if (res === '뭐라고' || res === '다시') {
                 var description = $(processCanvasList[currentIndex]).attr('description');
-                description = description.slice(description.indexOf('.') + 1, description.length);
 
-                $('<iframe src="/speech?text=' + description + '">').appendTo($('.speechFrame'));
+                //$(`<iframe src="/speech?text=${description}">`).appendTo($('.speechFrame'));
             }
         });
 
@@ -68,9 +69,8 @@ var cook = new function () {
         $(processCanvasList[index]).css('display', 'block');
 
         var description = $(processCanvasList[index]).attr('description');
-        description = description.slice(description.indexOf('.') + 1, description.length);
 
-        $('<iframe src="/speech?text=' + description + '">').appendTo($('.speechFrame'));
+        //$(`<iframe src="/speech?text=${description}">`).appendTo($('.speechFrame'));
     };
 }();
 
