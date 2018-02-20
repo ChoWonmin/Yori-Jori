@@ -10,8 +10,6 @@ const destFile = path + 'food.json';
 const cookList = jsonfile.readFileSync(file);
 let res = {};
 
-//console.log(cookList);
-
 _.forEach(cookList , (cook,i)=>{
     const id = cook.id;
     res[id] = cook;

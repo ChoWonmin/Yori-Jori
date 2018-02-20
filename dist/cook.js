@@ -41,10 +41,12 @@ var cook = new function () {
         $(processCanvasList[index]).css('display', 'block');
 
         var description = $(processCanvasList[index]).attr('description');
+        description = description.slice(description.indexOf('.') + 1, description.length);
+
+        console.log('indexOf ', description.indexOf('.'));
+        console.log('description ', description);
 
         $('<iframe src="/speech?text=' + description + '">').appendTo($('.speechFrame'));
-
-        console.log('frame 호출');
     };
 }();
 
