@@ -22,14 +22,12 @@ var main = new function () {
 
                         currentList = cookList;
 
-                        console.log(cookList);
-
                         that.drawCookList(cookList);
                         that.addModal();
 
                         that.addSearchAction();
 
-                    case 8:
+                    case 7:
                     case 'end':
                         return _context.stop();
                 }
@@ -80,8 +78,6 @@ var main = new function () {
     };
 
     this.addSearchAction = function () {
-        console.log('add SearchAction');
-
         var $searchBar = $('.search_bar_input');
 
         $searchBar.keyup(function () {

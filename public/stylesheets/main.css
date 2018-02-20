@@ -9,6 +9,9 @@
   .search .search_bar {
     display: inline-block;
     height: 100%; }
+    .search .search_bar .mic-btn {
+      width: 20px;
+      height: 20px; }
     .search .search_bar .search_bar_input {
       display: inline-block;
       border: none;

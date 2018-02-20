@@ -9,8 +9,6 @@ const main = new function () {
         cookList = await Util.loadJson(FOOD_JSON);
         currentList = cookList;
 
-        console.log(cookList);
-
         that.drawCookList(cookList);
         that.addModal();
 
@@ -64,8 +62,6 @@ const main = new function () {
     }
 
     this.addSearchAction = function () {
-        console.log('add SearchAction');
-
         const $searchBar = $('.search_bar_input');
 
         $searchBar.keyup(function () {

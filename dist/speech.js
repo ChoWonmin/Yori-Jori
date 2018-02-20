@@ -1,25 +1,30 @@
 'use strict';
 
-if (!('webkitSpeechRecognition' in window)) $('#speechbbbbox').html('<strong>지원하지 않는 브라우저입니다.</strong>');else {
-    var recognition = new webkitSpeechRecognition();
-    recognition.continuous = true;
-    recognition.interimResults = true;
-    recognition.lang = 'ko-KR';
+var recognization = new function () {
 
-    recognition.onresult = function (event) {
-        var interim_transcript = '';
-        var final_transcript = '';
+    var mic = new webkitSpeechRecognition();
 
-        for (var i = event.resultIndex; i < event.results.length; ++i) {
-            if (event.results[i].isFinal) {
-                final_transcript += event.results[i][0].transcript;
-            } else {
-                interim_transcript += event.results[i][0].transcript;
-            }
-        }
-
-        console.log(interim_transcript, final_transcript);
+    this.setting = function () {
+        mic.continuous = true;
+        mic.interimResults = true;
+        mic.lang = 'ko-KR';
     };
 
-    recognition.start();
-}
+    if (!('webkitSpeechRecognition' in window)) alert('음성 인식을 지원하지 않는 브라우저입니다');else {
+
+        mic.onresult = function (event) {
+
+            var final_transcript = '';
+
+            console.log(event);
+
+            for (var i = event.resultIndex; i < event.results.length; ++i) {
+                if (event.results[i].isFinal) final_transcript += event.results[i][0].transcript;
+            }
+
+            console.log(final_transcript);
+        };
+
+        mic.start();
+    }
+}();
