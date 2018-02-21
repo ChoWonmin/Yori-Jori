@@ -55,11 +55,19 @@ html
 
     - for (var i = 0 ; i < cook.process.length ; i++)
         .process-wrap(description='#{cook.process[i]}')
-            img(src="/images/process/#{cook.id}_#{i+1}.jpg")
-            .descript #{cook.process[i]}
+            process
+                .left-side
+                    .back.btn(index='#{i}')
+                        i.btn.material-icons chevron_left
+                .center-side
+                    .image-wrapped
+                        img(src="/images/process/#{cook.id}_#{i+1}.jpg")
+                    .description-wrapped
+                        .descript #{cook.process[i]}
+                .right-side
+                    .next.btn(index='#{i}')
+                        i.btn.material-icons chevron_right
 
-            .next.btn(index='#{i}') next
-            .back.btn(index='#{i}') back
 
     .speechFrame
 
@@ -67,4 +75,3 @@ html
     link(rel='stylesheet', href='/stylesheets/cook.css')
     script(src='/recognization.js')
     script(src='/cook.js')
-

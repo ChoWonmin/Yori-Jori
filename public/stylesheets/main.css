@@ -9,9 +9,6 @@
   .search .search_bar {
     display: inline-block;
     height: 100%; }
-    .search .search_bar .mic-btn {
-      width: 20px;
-      height: 20px; }
     .search .search_bar .search_bar_input {
       display: inline-block;
       border: none;
@@ -28,28 +25,6 @@
   height: 80px;
   background-color: #fefefe;
   border-bottom: 1px solid lightgray; }
-  .filter .selection-checkboxes {
-    width: 100%;
-    height: 100%;
-    margin-bottom: 5px; }
-    .filter .selection-checkboxes .selection-checkbox {
-      width: 100%;
-      height: 40px;
-      margin-top: 5px;
-      margin-bottom: 5px;
-      float: left;
-      text-align: center; }
-      .filter .selection-checkboxes .selection-checkbox p {
-        height: 40px;
-        line-height: 40px;
-        margin: auto;
-        font-size: 110%;
-        width: auto;
-        font-weight: bold; }
-        .filter .selection-checkboxes .selection-checkbox p .box {
-          font-weight: normal;
-          font-size: 100%;
-          margin-left: 10px; }
 
 .container {
   margin-left: auto;
@@ -92,7 +67,7 @@
   display: none; }
   .cookModal-container .cookModal {
     width: 1066px;
-    height: 650px;
+    height: 600px;
     margin: 151px auto; }
   .cookModal-container i.close-btn {
     color: #fcfcfc;

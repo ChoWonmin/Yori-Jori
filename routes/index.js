@@ -20,9 +20,10 @@ router.get('/main', function (req, res, next) {
     res.render('main');
 });
 
-
 const client_id = 'wGUQ5dnR4fGfwyhkLMXd';
 const client_secret = 'aJ_WSLs9Y_';
+
+
 
 router.get('/speech', function (req, res) {
     var queries = req.query;

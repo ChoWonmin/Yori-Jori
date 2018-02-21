@@ -2,7 +2,7 @@ $modal-header-height : 130px
 
 
 .article
-  border: 5px solid lightgray
+  border: 3px solid #f5f6fa
   display: inline-block
   width: 1066px
   height: 600px
@@ -10,7 +10,7 @@ $modal-header-height : 130px
   .articleImage
     width: 60%
     height: 100%
-    border-right: 5px solid lightgray
+    border-right: 3px solid #f5f6fa
     display: inline-block
     vertical-align: top
 
@@ -57,8 +57,6 @@ $modal-header-height : 130px
           height: 100%
           flex: 1
 
-          img
-
           .material-icons
             font-size: 30px
 
@@ -98,14 +96,109 @@ $modal-header-height : 130px
           text-align: right
           color: white
           margin-right: 0
+          margin-left: 250px
         h2:hover
-          font-size: 200%
+          color: #f39c12
         i.next
           color: white
 
 .process-wrap
-  background-color: white
+  display: inline-block
+  width: 1066px
+  height: 600px
+  margin: 151px auto
   display: none
+
+  .left-side
+    width: 5%
+    height: calc(100% - 40px)
+    display: inline-block
+    vertical-align: top
+    margin: 20px 0
+    border-right: 1px solid lightgray
+
+    .back.btn
+      display: inline-block
+      text-align: center
+      line-height: 580px
+      width: 100%
+      color: #707070
+
+      i.btn.material-icons
+        font-size: 40px
+
+        &:hover
+          border: 0.5px solid white
+          color: white
+          border-radius: 20px
+          cursor: pointer
+
+  .center-side
+    width: 90%
+    height: 100%
+    display: inline-block
+    vertical-align: top
+    background-color: whitesmoke
+
+    .image-wrapped
+      width: calc(60% - 40px)
+      height: calc(100% - 40px)
+      display: inline-block
+      margin: 20px 0 20px 20px
+      border-top: 3px double lightgray
+      border-left: 3px double lightgray
+      border-bottom: 3px double lightgray
+
+      img
+        margin: 80px
+        //padding: 100px
+        width: calc(100% - 200px)
+        height: calc(100% - 200px)
+
+    .description-wrapped
+      width: 40%
+      height: calc(100% - 40px)
+      padding-left: 18px
+      margin: 20px 20px 20px 0
+      display: inline-block
+      vertical-align: top
+      border-right: 3px double lightgray
+      border-top: 3px double lightgray
+      border-bottom: 3px double lightgray
+
+      .descript
+        height: calc(100% - 60px)
+        margin: 30px 0
+        text-align: center
+        line-height: 488px
+        font-size: 100%
+        border-left: 2px dotted lightgray
+
+  .right-side
+    width: 5%
+    height: calc(100% - 40px)
+    display: inline-block
+    vertical-align: top
+    border-left: 1px solid lightgray
+    margin: 20px 0
+
+    .next.btn
+      width: 100%
+      display: inline-block
+      line-height: 580px
+      text-align: center
+      color: #707070
+
+      i.btn.material-icons
+        font-size: 40px
+
+        &:hover
+          border: 0.5px solid white
+          color: white
+          border-radius: 20px
+          cursor: pointer
+
+
 
 .speechFrame
   display: none
