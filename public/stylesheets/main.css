@@ -25,6 +25,56 @@
   height: 80px;
   background-color: #fefefe;
   border-bottom: 1px solid lightgray; }
+  .filter .process-container {
+    width: 25%;
+    height: 100%;
+    background-color: mistyrose;
+    float: left; }
+    .filter .process-container .difficulty-container {
+      width: 33.3%;
+      height: 100%;
+      float: left;
+      border: 1px solid black; }
+      .filter .process-container .difficulty-container .difficulty {
+        width: 100%;
+        cursor: pointer;
+        height: 100%;
+        background-color: silver; }
+      .filter .process-container .difficulty-container .difficulty:hover {
+        cursor: pointer;
+        background-color: darkgray; }
+  .filter .slide-container {
+    width: 25%;
+    height: 100%;
+    float: right; }
+    .filter .slide-container .time-container {
+      width: 100%;
+      height: 50%;
+      background: green; }
+      .filter .slide-container .time-container .limit_time_input {
+        display: inline-block;
+        border: none;
+        outline: none;
+        text-align: center;
+        width: 20%;
+        height: 100%;
+        font-size: 2rem;
+        overflow: hidden;
+        background: lightgoldenrodyellow; }
+    .filter .slide-container .kcal-container {
+      width: 100%;
+      height: 50%;
+      background: pink; }
+      .filter .slide-container .kcal-container .limit_kcal_input {
+        display: inline-block;
+        border: none;
+        outline: none;
+        text-align: center;
+        width: 20%;
+        height: 100%;
+        font-size: 2rem;
+        overflow: hidden;
+        background: bisque; }
 
 .container {
   margin-left: auto;
