@@ -20,7 +20,7 @@ var cook = new function () {
 
             if (res === '다음') {
                 if (currentIndex === -1) that.startProcess();else that.nextProcess();
-            } else if (res === '아까') that.backProcess();else if (res === '뭐라고' || res === '다시') {
+            } else if (res === '아까' || res === '전에') that.backProcess();else if (res === '뭐라고' || res === '다시') {
                 var description = $(processCanvasList[currentIndex]).attr('description');
 
                 $('<iframe src="/speech?text=' + description + '">').appendTo($('.speechFrame'));
@@ -39,8 +39,6 @@ var cook = new function () {
     };
 
     this.startProcess = function () {
-
-        console.log('process');
 
         cookCanvas.attr('display', 'none');
         currentIndex = 0;

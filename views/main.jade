@@ -9,25 +9,6 @@ block content
             form.search_bar(method='post', action='/')
                 input.search_bar_input(autocomplete='off', type='text', name='search', value='', placeholder='검색어를 입력해주세요')
 
-        //main.jade filter 부분
-        .filter
-            .process-container
-                .difficulty-container
-                    #d-low.difficulty(value = "checked")
-                .difficulty-container
-                    #d-mid.difficulty(value = "checked")
-                .difficulty-container
-                    #d-high.difficulty(value = "checked")
-            .slide-container
-                .time-container
-                    input.limit_time_input(id = "limit_time_min", autocomplete='off', type='text', name='search', value='', placeholder='T_min')
-                    input.limit_time_input(id = "limit_time_max", autocomplete='off', type='text', name='search', value='', placeholder='T_max')
-
-                .kcal-container
-                    input.limit_kcal_input(id = "limit_kcal_min", autocomplete='off', type='text', name='search', value='', placeholder='K_min')
-                    input.limit_kcal_input(id = "limit_kcal_max", autocomplete='off', type='text', name='search', value='', placeholder="K_max")
-
-
     .container
 
         .cookList

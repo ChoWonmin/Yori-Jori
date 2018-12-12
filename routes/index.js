@@ -7,7 +7,7 @@ const cookList = jsonfile.readFileSync('src/data/food.json')
 
 /* GET home page. */
 router.get('/', function (req, res, next) {
-    res.render('index', {title: 'Express'});
+    res.render('main');
 });
 
 router.get('/cook', function (req, res, next) {

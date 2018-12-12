@@ -42,10 +42,8 @@ var main = new function () {
 
                         that.drawCookList(OriginalList);
                         that.addModal();
-                        console.log("초기화 완료");
-                        console.log("Recipe 수: " + Object.keys(tmpList).length);
 
-                    case 9:
+                    case 7:
                     case 'end':
                         return _context.stop();
                 }
@@ -110,8 +108,7 @@ var main = new function () {
         if (max === undefined || max === "") {
             max = "1267";
         }
-        console.log("searchByKcal 시작");
-        console.log("min: " + min + " max: " + max);
+
         var temp = _.filter(list, function (v) {
             return v.kcal >= parseInt(min) && v.kcal <= parseInt(max);
         });
@@ -120,8 +117,6 @@ var main = new function () {
         _.forEach(temp, function (t) {
             return list[t.id] = t;
         });
-        console.log(list);
-        console.log("search By kcal recipe: " + Object.keys(list).length);
 
         return list;
     };
@@ -342,17 +337,11 @@ var main = new function () {
 
     this.filter_time = function (list) {
 
-        //list = {};
-        //_.forEach(temp , t => list[t.id] = t);
-        console.log("Time");
         return list;
     };
 
     this.filter_kcal = function (list) {
 
-        //list = {};
-        //_.forEach(temp , t => list[t.id] = t);
-        console.log("Kcal");
         return list;
     };
 
@@ -362,13 +351,6 @@ var main = new function () {
         tmpList = that.filter_difficulty(tmpList);
         tmpList = that.searchByKcal(tmpList, kcalMin, kcalMax);
         tmpList = that.searchByTime(tmpList, timeMin, timeMax);
-
-        /*
-         update with calling functions.
-         */
-
-        console.log("업데이트 완료!");
-        console.log("Recipe 수: " + Object.keys(tmpList).length);
 
         that.drawCookList(tmpList);
         that.addModal();
