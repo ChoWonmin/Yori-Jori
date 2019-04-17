@@ -1,6 +1,8 @@
 src/firebase.wrapper.js
 .DS_Store
 
+tts.mp3
+
 node_modules/
 dist/
 npm-debug.log*
